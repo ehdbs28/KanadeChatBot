@@ -15,11 +15,13 @@ export class MessageHandler {
     }
 
     public async handle(msg: Message) {
-        if (msg.author.bot || msg.channelId !== config.CHAT_CHANNEL_ID || !msg.content) {
+        if (msg.author.bot || msg.channelId != config.CHAT_CHANNEL_ID || !msg.content) {
             return;
         }
 
         try {
+            log.info(`[${msg.author.displayName}]: ${msg.content}`);
+
             if (!this.threadId) {
                 this.threadId = await this.createThread();
             }
@@ -34,6 +36,8 @@ export class MessageHandler {
             const text = receivedContent.text.value;
 
             msg.channel.send(text);
+
+            log.info(`[카나데]: ${text}`);
         } catch (err) {
             log.error(err);
         }
