@@ -1,8 +1,7 @@
-import { Client, GatewayIntentBits, Interaction } from "discord.js"
-import { Logger, ILogObj } from "tslog"
+import { Client, GatewayIntentBits } from "discord.js"
 import { config } from "./config"
+import { log } from "./log"
 
-const log: Logger<ILogObj> = new Logger();
 let client: Client;
 
 (async () => {
@@ -17,7 +16,6 @@ let client: Client;
     });
 
     client.on("messageCreate", msg => {
-        msg.reply(msg.content);
     });
 
     client.on("error", err => {
