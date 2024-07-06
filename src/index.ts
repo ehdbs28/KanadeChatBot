@@ -1,8 +1,10 @@
 import { Client, GatewayIntentBits } from "discord.js"
 import { config } from "./config"
 import { log } from "./log"
+import { MessageHandler } from "./messageHandler";
 
 let client: Client;
+const messageHandler = new MessageHandler();
 
 (async () => {
     const intents = [
@@ -16,6 +18,7 @@ let client: Client;
     });
 
     client.on("messageCreate", msg => {
+        messageHandler.handle(msg);
     });
 
     client.on("error", err => {

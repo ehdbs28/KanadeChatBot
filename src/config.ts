@@ -2,7 +2,7 @@ import dotenv from "dotenv"
 
 dotenv.config();
 
-const { BOT_TOKEN, CHAT_CHANNEL_ID, OPEN_AI_API_KEY, OPEN_AI_API_PROJECT_ID } = process.env;
+const { BOT_TOKEN, CHAT_CHANNEL_ID, OPENAI_API_KEY, OPENAI_ASSISTANT_ID } = process.env;
 
 if(!BOT_TOKEN || !CHAT_CHANNEL_ID) {
     throw new Error("Missing environment variables");
@@ -11,6 +11,6 @@ if(!BOT_TOKEN || !CHAT_CHANNEL_ID) {
 export const config = {
     BOT_TOKEN,
     CHAT_CHANNEL_ID,
-    OPEN_AI_API_KEY,
-    OPEN_AI_API_PROJECT_ID
+    OPENAI_API_KEY,
+    OPENAI_ASSISTANT_ID
 };
