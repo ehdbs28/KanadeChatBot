@@ -9,9 +9,9 @@ OpenAi의 Assistant api를 사용하여, [요이사키 카나데](https://namu.w
 
 `.env` 파일 속 정보를 설정합니다. (숨겨진 파일 보기를 체크해야 보입니다.)
 
-> BOT_TOKEN -> 디스코드 봇의 토큰을 입력합니다.<br>
-> CHAT_CHANNEL_ID -> 챗봇이 활동할 디스코드 채널의 ID를 입력합니다.<br>
-> OPENAI_API_KEY -> Open Ai에서 발급받은 api key를 입력합니다.<br>
-> OPENAI_ASSISTANT_ID -> Assistant에서 제작한 챗봇의 ID를 입력합니다.<br>
+> **BOT_TOKEN** -> 디스코드 봇의 토큰을 입력합니다.<br>
+> **CHAT_CHANNEL_ID** -> 챗봇이 활동할 디스코드 채널의 ID를 입력합니다.<br>
+> **OPENAI_API_KEY** -> Open Ai에서 발급받은 api key를 입력합니다.<br>
+> **OPENAI_ASSISTANT_ID** -> Assistant에서 제작한 챗봇의 ID를 입력합니다.<br>
 
 `npm run dev` | `npm run start`를 통해 봇을 실행하실 수 있습니다.
